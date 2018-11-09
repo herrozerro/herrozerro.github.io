@@ -3,4 +3,6 @@ layout: post
 title: I'm up and running!
 ---
 
-Test Post
+Hello World.
+
+Just setting things up here, pardon the mess.
