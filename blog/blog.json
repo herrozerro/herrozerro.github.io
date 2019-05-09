@@ -3,7 +3,7 @@
   "url_title": "my-first-blog-again",
   "title": "My First Blog... Again",
   "sub_title": "Restarting with a new theme.",
-  "top_image": "images/nasa-45072-unsplash.jpg",
+  "top_image": "/images/nasa-45072-unsplash.jpg",
   "visible": true
  }
 ]
