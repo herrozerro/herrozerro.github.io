@@ -66,7 +66,7 @@
     $.getJSON("repos.json", function(repos){
         for(var i = 0; i < repos.length; i++){
             $("#projects").append(`
-                    <a href="${repos[i].html_url}" target="_blank">
+                    <a href="${repos[i].html_url}" target="_blank">GENERATED
                     <section>
                         <div class="section_title">${repos[i].name}</div>
                         <div class="about_section">
