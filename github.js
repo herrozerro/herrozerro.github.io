@@ -10,7 +10,7 @@ program
   .option('-n, --name [username]', 'get username')
   .parse(process.argv);
 
-function populateHTML(username){
+function PopulateRepos(username){
     var repoData = [];
     (async () => {
         try {
@@ -29,7 +29,6 @@ function populateHTML(username){
         }
 
     }
-    //console.log(repoData);
     fs.writeFile('repos.json', JSON.stringify(repoData), function(err){
         if (err) throw err;
         console.log('Repos Created Successfully in root folder.');
@@ -40,7 +39,7 @@ function populateHTML(username){
 })();
 }
 if (program.name) {
-    populateHTML(('%s', program.name));
+    PopulateRepos(('%s', program.name));
 } else {
     console.log("provide a name to scrape repos");
 }
