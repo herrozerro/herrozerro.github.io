@@ -25,123 +25,7 @@
         <div id="work">
             <h1>Work.</h1>
             <div id="projects">
-                    <a href="https://github.com/herrozerro/ubiquitous-memory" target="_blank">
-                    <section>
-                        <div class="section_title">ubiquitous-memory</div>
-                        <div class="about_section">
-                        Blazor App Testing
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; null</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/Olympia-Descent" target="_blank">
-                    <section>
-                        <div class="section_title">Olympia-Descent</div>
-                        <div class="about_section">
-                        null
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; null</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/WritingGit" target="_blank">
-                    <section>
-                        <div class="section_title">WritingGit</div>
-                        <div class="about_section">
-                        An app for writers using git.
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; C#</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/IMDG-TaskListApp" target="_blank">
-                    <section>
-                        <div class="section_title">IMDG-TaskListApp</div>
-                        <div class="about_section">
-                        A Task List App for the IMDG meetup
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; C#</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/The-Disk-Setting" target="_blank">
-                    <section>
-                        <div class="section_title">The-Disk-Setting</div>
-                        <div class="about_section">
-                        A setting for Cypher System reminiscent of media like TRON or Reboot.
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; null</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/Grave_Tutorial" target="_blank">
-                    <section>
-                        <div class="section_title">Grave_Tutorial</div>
-                        <div class="about_section">
-                        Running through the tutorial from Heart beast
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; Game Maker Language</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/Discord-Bot-Demo" target="_blank">
-                    <section>
-                        <div class="section_title">Discord-Bot-Demo</div>
-                        <div class="about_section">
-                        null
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; C#</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/herrozerro.github.io" target="_blank">
-                    <section>
-                        <div class="section_title">herrozerro.github.io</div>
-                        <div class="about_section">
-                        null
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; HTML</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                        </div>
-                    </section>
-                    </a>
-                    <a href="https://github.com/herrozerro/HTML5-Power2ool-Test" target="_blank">
-                    <section>
-                        <div class="section_title">HTML5-Power2ool-Test</div>
-                        <div class="about_section">
-                        Testing HTML Stuff
-                        </div>
-                        <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                        </div>
-                    </section>
-                    </a></div>
+            </div>
         </div>
         <div id="blog_section">
             <h1>Blog.</h1>
@@ -176,6 +60,26 @@
                 </section>
             </a>
             `)
+        }
+    });
+
+    $.getJSON("repos.json", function(repos){
+        for(var i = 0; i < repos.length; i++){
+            $("#projects").append(`
+                    <a href="${repos[i].html_url}" target="_blank">
+                    <section>
+                        <div class="section_title">${repos[i].name}</div>
+                        <div class="about_section">
+                        ${repos[i].description}
+                        </div>
+                        <div class="bottom_section">
+                            <span><i class="fas fa-code"></i>&nbsp; ${repos[i].language}</span>
+                            <span><i class="fas fa-star"></i>&nbsp; ${repos[i].stargazers_count}</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; ${repos[i].forks_count}</span>
+                        </div>
+                    </section>
+                    </a>
+                    `)
         }
     });
     </script>

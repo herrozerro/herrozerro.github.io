@@ -28,7 +28,7 @@ function createBlog(title) {
                     "url_title": title,
                     "title": "Lorem ipsum dolor sit amet",
                     "sub_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "top_image": "https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1450",
+                    "top_image": "/images/nasa-45072-unsplash.jpg",
                     "visible": true }
                 fs.readFile("./blog/blog.json", function (err , data) {
                     if (err) throw err;
