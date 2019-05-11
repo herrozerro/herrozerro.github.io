@@ -29,9 +29,9 @@ function PopulateRepos(username){
         }
 
     }
-    fs.writeFile('repos.json', JSON.stringify(repoData), function(err){
+    fs.writeFile('./repos/repos.json', JSON.stringify(repoData), function(err){
         if (err) throw err;
-        console.log('Repos Created Successfully in root folder.');
+        console.log('Repos Created Successfully in repos folder.');
       });
     } catch (error) {
         console.log(error);

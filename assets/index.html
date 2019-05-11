@@ -62,7 +62,7 @@
             `)
         }
     });
-    $.getJSON("repos.json", function(repos){
+    $.getJSON("./repos/repos.json", function(repos){
         for(var i = 0; i < repos.length; i++){
             $("#projects").append(`
                     <a href="${repos[i].html_url}" target="_blank">
