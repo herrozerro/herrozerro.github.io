@@ -74,6 +74,10 @@ body{
     font-family: 'Questrial', sans-serif;
 }
 
+.emoji {
+    width:18px;
+    height:18px;
+}
 
 #profile_img_blog {
     border-radius:50%;
@@ -236,6 +240,18 @@ body{
     font-family: 'Questrial', sans-serif;
 }
 
+#about a,
+#username a {
+    color:#fff !important;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#about a:hover,
+#username a:hover {
+    text-decoration:underline;
+}
+
 #about span {
     margin:1vh 0px;
     display:block;
@@ -250,11 +266,16 @@ body{
     padding:4vh 0px !important;
 }
 
-#projects {
+#forks {
+    margin:2vh 0px;
+    padding:4vh 0px !important;
+}
+
+.projects {
     columns:2;
 }
 
-#projects section {
+.projects section {
     width:85%;
     padding:2.5vh 5%;
     display:inline-block;
@@ -267,7 +288,7 @@ body{
     transform:scale(1);
 }
 
-#projects section:hover {
+.projects section:hover {
     cursor: pointer;
     border:1px solid rgb(0, 0, 0, 0);
     box-shadow:0px 15px 35px rgb(0, 0, 0, 0.06);
@@ -278,6 +299,8 @@ body{
     font-size:24px;
     font-weight:bold;
     margin:1vh 0px;
+    padding:0px 1px;
+    word-wrap: break-word;
 }
 
 .about_section {
@@ -285,11 +308,13 @@ body{
     font-family: 'Questrial', sans-serif;
     margin:2vh 0px;
     font-weight:bold;
+    word-wrap: break-word;
 }
 
 .bottom_section {
     margin:1vh 0px;
     font-size:14px;
+    word-wrap: break-word;
 }
 
 .bottom_section span {
@@ -375,10 +400,10 @@ body{
     #work {
         margin:0px;
     }
-    #projects {
+    .projects {
         columns:1;
     }
-    #projects section {
+    .projects section {
         width:88%;
     }
     #blogs {
@@ -421,4 +446,35 @@ body{
 
 ::-webkit-scrollbar {width:5px;height:5px;}
 ::-webkit-scrollbar-track {background:var(--bg-color);}
-::-webkit-scrollbar-thumb {background:var(--text-color);}:root {--bg-color: rgb(10, 10, 10);--text-color: #fff;--blog-gray-color:rgb(180, 180, 180);--background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgb(10, 10, 10, 1)), url('/images/mathew-schwartz-731844-unsplash.jpg') !important;}
+::-webkit-scrollbar-thumb {background:var(--text-color);}
+:root {
+  --bg-color: rgb(10, 10, 10);
+  --text-color: #fff;
+  --blog-gray-color: rgb(180, 180, 180);
+  --background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgb(10, 10, 10, 1)), url("https://images.unsplash.com/photo-1531160492875-2a09eb0cd73b");
+  --background-background: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.6)),
+    url("https://images.unsplash.com/photo-1531160492875-2a09eb0cd73b") center center fixed;
+  --height: 50vh;
+}
+#display h1 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #fff;
+}
+#blog-display h1 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #fff;
+}
+.projects section {
+  background: rgb(20, 20, 20);
+}
+#blog_section section {
+  background: rgb(20, 20, 20);
+}
+@media (max-width: 800px) {
+  :root {
+    --background-image: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0)),
+    url("https://images.unsplash.com/photo-1531160492875-2a09eb0cd73b") !important;
+  }
+}
